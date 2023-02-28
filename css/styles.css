@@ -32,14 +32,19 @@ ul {
 }
 
 nav {
-    width: 100%;
-    display: flex;
-    align-items:center;
-    padding: 1.5rem 3.5rem;
-    background-color: #da8;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    }
-  
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  background-color: #da8;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+
   
   nav a {
     text-decoration: none;
@@ -86,8 +91,8 @@ nav {
     
     position: absolute;
     justify-content: center;
-    height: 50vh;
-   margin-top: 220px;
+    height: 450px;
+    top: 222px;
   }
   .titulo-header{
     position:absolute;
@@ -310,18 +315,25 @@ nav {
     height: 3rem;
   }
 
-  /** responsive*/
+  /** responsive **/
   
   @media screen and (max-width: 720px) {
     
-    nav {
-      width: 100%;
-      display: flex;
-      align-items:center;
-      padding: 1.5rem 3.5rem;
+    nav ul {
+      position: fixed;
       background-color: #da8;
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-      }
+      flex-direction: column;
+      top: 86px;
+      left: 10%;
+      width: 80%;
+      text-align: center;
+      transform: translateX(120%);
+      transition: transform 0.5s ease-in;
+    }
+  
+     nav ul li {
+      margin: 8px;
+    }
     nav a {
       text-decoration: none;
       color: white;
@@ -335,6 +347,7 @@ nav {
     }
     
     nav ul {
+      background-color: #da8;
       display:flex;
       gap: 1.9rem;
       margin-top: -35px;
@@ -480,6 +493,7 @@ nav {
       display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
       gap: 2.5rem;
       margin-top: -70px;
       height: 60vh;
@@ -497,6 +511,7 @@ nav {
       position: absolute;
       top:500px;
       color:white;
+      left: 42px;
       margin-top: 30px;
       font-size:30px;
       text-shadow: 0 3px 5px black;
@@ -504,8 +519,8 @@ nav {
    .subtitulo{
     position:absolute;
       color:white;
-      top:470px;
-      margin-top: -21rem;
+      top:500px;
+      
       font-size: 22px;
       text-shadow: 0 3px 5px black;
    }
@@ -523,21 +538,13 @@ nav {
     }
     
     .bio{
+      position: relative;
     justify-content: center;
     text-align: center;
-    margin-left: 80px;
+    right: 20px;
     }
     
-    .mas-sobre p {
-      
-      line-height: var(--line-height);
-      padding: 0.4rem;
-      text-align: center;
-    }
-  
-    
-    
-  
+   
 
     /* habilidades */
 
@@ -563,10 +570,23 @@ nav {
       }
   }
 
-  
   @media screen and (max-width: 920px) {
     /*-- menu --*/
-   
+    nav ul {
+      position: fixed;
+      background-color: #da8;
+      flex-direction: column;
+      top: 86px;
+      left: 10%;
+      width: 80%;
+      text-align: center;
+      transform: translateX(120%);
+      transition: transform 0.5s ease-in;
+    }
+  
+     nav ul li {
+      margin: 8px;
+    }
     nav a {
       text-decoration: none;
       color: rgb(9, 8, 8);
